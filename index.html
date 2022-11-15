@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https:///fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afbril+Fatface&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Sneha Manjunath</title>
+</head>
+<body>
+  <!-- navbar -->
+    <nav>
+      <div class="logo">Sneha</div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="home">Home</a></li>
+          <li><a href="about.html" class="about">About</a></li>
+          <li><a href="work.html" class="work">Work</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+    </nav>
+<!-- nav end -->
+
+<!-- home -->
+<h1>SNEHA MANJUNATH</h1>
+
+<div class="tag">
+  <div class="wrapper">
+    <div class="static">
+      I'm a
+    </div>
+    <ul class="dynamic">
+      <li><span>PYTHON DEVELOPER</span></li>
+      <li><span>WEB DEVELOPER</span></li>
+      <li><span>ML ENTHUSIAST</span></li>
+      <li><span>FRESHER</span></li>
+    </ul>
+</div>
+</div>
+
+<div class="contacts">
+  <a href="emailpage.html">
+    <img src="Images\1.png" alt="logo"/>
+  </a>
+  <a href="https://www.linkedin.com/in/sneha-manjunath-mcz2b2gmjr">
+    <img src="Images\2.png" alt="logo"/>
+  </a>
+  <a href="https://twitter.com/snehamanjunat36">
+    <img src="Images\twiter.png" alt="logo"/>
+  </a>
+  <a href="https://github.com/snehamanjunath36">
+    <img src="Images\4.png" alt="logo"/>
+  </a>
+  <a href="https://www.google.com/maps/place/P.E.S.+Institute+of+Technology+and+Management/@13.9612825,75.5062581,17z/data=!4m12!1m6!3m5!1s0x3bbba5eb38753875:0x239d4f69a53edc48!2sP.E.S.+Institute+of+Technology+and+Management!8m2!3d13.9612825!4d75.5084521!3m4!1s0x3bbba5eb38753875:0x239d4f69a53edc48!8m2!3d13.9612825!4d75.5084521">
+    <img src="Images\5.png" alt="logo"/>
+  </a>
+</div>
+<!-- home end -->
+
+
+
+
+
+<!-- home end -->
+
+<script>
+  const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+    
+    burger.addEventListener('click',() => {
+        // toggle bar
+        nav.classList.toggle('nav-active');
+        // animate links
+        navLinks.forEach((link, index) =>{
+            if (link.style.animation){
+                link.style.animation = '';
+            } else{
+                link.style.animation = 'navLinkFade 0.5s ease forwards ${index /7 + 1.5}s';
+            }
+        });
+         //burger animation
+         burger.classList.toggle('toggle');
+    });
+    
+}
+navSlide()
+</script>
+
+</body>
+</html>
